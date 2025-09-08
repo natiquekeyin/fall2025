@@ -1,0 +1,28 @@
+
+Welcome to JavaScript
+
+How to run JavaScript?
+
+1. By using browser REPL: Read Evaluate Process and Loop
+2. By linking a js file with HTML (As we have done before)
+
+[For above, we are developing/using the webbrowser files or websites]
+
+3. We can use JS to make console/desktop applications ALSO... by using "node.js" and saving script file and running that... node js REPL
+
+Declaring Variables in JS:
+ 1. let x =10;
+ 2. var y = 20; (Older / legacy way of declaring variables..)
+ 3. const z = 30;
+
+
+ Operators in JS:
+    Arithematic Operators: +, - , * , / , %
+    Assignment Operator: = 
+    Arithematic Assignment:  += , -= , *=
+    Increment/Decrement Operators: ++, -- 
+        Pre-Increment/ Post Increment
+
+    let x=10;
+    x = x+5;// instead of this
+    x+=5;
