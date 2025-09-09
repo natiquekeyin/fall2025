@@ -17,12 +17,60 @@ Declaring Variables in JS:
 
 
  Operators in JS:
-    Arithematic Operators: +, - , * , / , %
+    Arithematic Operators: +, - , * , / , %  [ x + ]
     Assignment Operator: = 
     Arithematic Assignment:  += , -= , *=
-    Increment/Decrement Operators: ++, -- 
-        Pre-Increment/ Post Increment
+    Increment/Decrement Operators: ++, -- [Unary Opertor][x++][++x]
+    Ternary Operator(Conditional operator):
 
-    let x=10;
-    x = x+5;// instead of this
-    x+=5;
+    ? : [short form for if else - But remember this ternary operator will be used MANY times in React where we CANNOT use if else...]
+    operand_1 ? operand_2 : operand_3 
+    condition ? value_if_true : value_if_false 
+
+    variable naming rules:
+
+    i)The variable name should start with a letter
+       x1; 1x WRONG; abc123, abc_something, _x
+    ii)No spaces in the variable name..
+    iii) x and X are two different variables...
+
+    Naming Conventions:
+    
+    let first name; WRONG...
+    let first_name; CORRECT...
+    let first-name; CORRECT..
+    let firstName; CORRECT...
+
+    1. camelCase
+    firstName, lastName, dateOfBirth
+    2. PascalCase
+    FirstName, LastName, dateOfBirth
+    3. snake_case
+    first_name, last_name, date_of_birth
+    4. kebab-case [CSS]
+    first-name, last-name, date-of-birth 
+    background-color:blue; font-size:1rem
+
+Statement: 
+In JS statements are terminated(optionally) with a semi colon (;)[statement terminator]
+
+
+Block in JS:
+collection of few statements surrounded by {  }
+{
+    {
+
+    }
+}
+
+JS program execution:
+1. Sequential 
+2. Conditional
+3. Looping:
+    for loop??
+    for(initialization; condition; increment/decrement){
+
+
+    }
+    NESTED LOOP: (loop within a loop)
+4. Jumping/Functions 
