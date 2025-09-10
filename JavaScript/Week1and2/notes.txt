@@ -129,3 +129,5 @@ Strings in JS:
  Practice of functions and their return Types
 
  
+ Parameters and Arguments:
+ 

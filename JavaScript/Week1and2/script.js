@@ -180,10 +180,38 @@
 //   `Welcome ${name}! You are ${age} years old, and your height is ${height}`
 // );
 
-function doSomething(n) {
-  console.log(n);
-  console.log(n * n);
-  return n + n;
-}
+// function doSomething(n) {
+//   console.log(n);
+//   console.log(n * n);
+//   return n + n;
+// }
 
-console.log(doSomething(5));
+// console.log(doSomething(5));
+
+// function myLog(n) {
+//   console.log(n);
+// }
+
+// myLog();
+// myLog(5);
+// myLog(5, 10);
+
+// function myLog(a) {
+//   console.log(a, arguments.length, arguments[2]);
+// }
+
+// // myLog();
+// // myLog(5);
+// myLog(5, 10, 15);
+
+function sum() {
+  let size = arguments.length;
+  let total = 0;
+
+  for (let i = 0; i < size; i++) {
+    total = total + arguments[i];
+  }
+
+  console.log(total);
+}
+sum(51, 12, 30, 34);
