@@ -17,6 +17,11 @@ Declaring Variables in JS:
 
 
  Operators in JS:
+
+    == Equality operator
+    Coercion in JavaScript: Converting the data type before comparing....
+
+    === Strict Equality..(no type conversion before comparison - IN JS WE WILL MOSTLY BE USING === RATHER THEN == )
     Arithematic Operators: +, - , * , / , %  [ x + ]
     Assignment Operator: = 
     Arithematic Assignment:  += , -= , *=
@@ -74,3 +79,53 @@ JS program execution:
     }
     NESTED LOOP: (loop within a loop)
 4. Jumping/Functions 
+    Control transfer from one part of the program to the other
+
+Functions:
+Functions are called as "first class members of JavaScript program".
+
+Types of functions:
+1. User-defined functions (That we write)
+2. Pre-defined functions (given by JS code)[console.log() is a predefined function]
+
+User-defined functions:
+    We as programmers write the functions which are called user-defined functions.
+    i) Function Declarations
+    ii) Function expression
+    iii) Arrow Functions(Advanced JS or ES5 ES6)
+
+    I) Function declarations:
+
+    General Syntax:
+
+    function name_of_function(parameters list){
+
+    }
+// let result = square(5);
+// console.log(result);
+console.log(square(3));
+
+foo(); //calling/invoking a function
+
+II) Function expression:
+When we define a variable and store a function inside it, it is called function expression.
+
+III) Arrow Functions:
+Are most advanced functions in JS. 
+
+let foo = ()=>{ }
+
+typeof operator:
+
+Examples in code
+
+Data Types:
+
+Strings in JS:
+ let x = "hello";
+ let y= 'hello';
+ let z = `hello`
+
+ Practice of functions and their return Types
+
+ 

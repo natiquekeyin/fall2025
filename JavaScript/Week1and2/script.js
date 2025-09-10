@@ -98,8 +98,92 @@
 //   console.log(i);
 // }
 
-for (let i = 1; i <= 3; i++) {
-  for (let j = i; j <= 3; j++) {
-    console.log(i, j);
-  }
+// for (let i = 1; i <= 3; i++) {
+//   for (let j = i; j <= 3; j++) {
+//     console.log(i, j);
+//   }
+// }
+
+// Function Declarations:
+// function foo() {} // foo is a function that does not take any parameters and neither it returns anything
+// function square(n) {
+//   return n * n;
+// }
+// // square is a function that takes one parameter and returns its square
+// function add(a, b) {
+//   return a + b;
+// }
+
+//Function Expressions:
+
+// let foo = function () {}; //anonymous function
+
+// let square = function (n) {
+//   return n * n;
+// };
+
+// let add = function (a, b) {
+//   return a + b;
+// };
+
+// Arrow Functions:
+
+// let foo = () => {};
+
+// let square = (n) => n * n;
+
+// // let add1 = (a, b) => {
+// //   return a + b;
+// // };
+
+// let add = (a, b) => a + b;
+// console.log(typeof add);
+
+// let abc = null;
+// console.log(typeof abc);
+
+// let x = "Hello";
+// console.log(x + 10);
+
+// // typeof
+
+// console.log(typeof x);
+// x = 20;
+// console.log(typeof x);
+
+// let x = 10;
+
+// if (x == 10) {
+//   console.log("10 is a number");
+// }
+
+// let x = "10";
+// if (x === 10) {
+//   console.log("YES");
+// } else {
+//   console.log("NO");
+// }
+
+// let name = "Alan Smith";
+// let age = 20;
+// let height = 5.6;
+
+// console.log(
+//   "Welcome " +
+//     name +
+//     "You are " +
+//     age +
+//     "years old, and your height is " +
+//     height
+// );
+// console.log(
+//   `Welcome ${name}! You are ${age} years old, and your height is ${height}`
+// );
+
+function doSomething(n) {
+  console.log(n);
+  console.log(n * n);
+  return n + n;
 }
+
+console.log(doSomething(5));

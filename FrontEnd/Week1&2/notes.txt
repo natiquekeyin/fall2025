@@ -1,0 +1,52 @@
+Front-End Development
+    1. HTML
+    2. CSS
+    3. JavaScript
+
+HTML:
+A language to develop web pages!
+
+Elements in HTML!
+    1. Tag: A combination of "<" some text and ">"..
+    <html>,<hr>,<br>,<ul>,<li>  TAG
+
+    2. Element: A combination of Starting tag, some content and Ending tag!
+    <title>Some title here </title>
+    <h1>Hello world</h1>
+    <p>Thsi is some text </p>
+
+    An empty element is one in which there is no content... <br />, <hr />, <meta />
+ 
+    3. Entities in HTML:
+    Special characters that we can print in a webpage... they start with & and end with ;...
+    &lt; &gt;
+
+    4. Attributes: 
+    The extra functionality given to a tag...
+    <h1 id="first"> </h1>
+    <h1> </h1>
+
+    Syntax of HTML:
+    1. <html></html>
+    2. <head> <title>xyz</title> </head> Can be placed anywhere inside <html> element... it always executes first when document is downloaded..We usualy place our scripts in head, so that when they run, everything is available
+    3. <body> </body> Whatever we want to dispaly on webpage is placed inside the <body> element.
+
+    ALWAYS VALIDATE YOUR HTML BEFORE SUBMITTING...
+
+    Levels of Heading:
+    <h1>..</h1> Biggest of all...
+    ...
+    <h6>..</h6> Smallest of all
+
+    h1,h2,h3,h4,h5,h6
+
+    h1 is always the biggest level of heading regardless of its visible size...
+
+    Lists in HTML:
+    1. Ordered List (<ol></ol>):
+    2. Unordered List (<ul></ul>);
+    3. List Item (<li></li>)
+    4. Definition List (<dl></dl>)
+        <dt> Definition Term</dt>
+        <dd> Definition Description</dd>
+
