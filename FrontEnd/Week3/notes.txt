@@ -1,0 +1,29 @@
+Syntax of webpage: 
+<html></html>
+<head></head>
+<body><body>
+
+Semantic Elements: The accessibilty to the screen readers and stuff.
+
+<header>..</header>
+Introductory material for the page on the top!
+
+<nav>..</nav>
+
+Linking in html
+1. External Linking (Outside of our web page)
+2. Internal Linking (either linking to a page on our website... or linking within a page .. means we link to some part ofour web page)
+    i)Relative Path ( We use ./  which represents current working folder...)
+    ii) Absoulte path : the physical path of the file in directory.. starting with the drive letter (C:\...)
+<a>..</a>
+
+<main></main>
+<footer></footer>
+<aside></aside>
+<section></section>
+
+Tables in HTML:
+<table> </table>
+
+
+Forms in HTML:
