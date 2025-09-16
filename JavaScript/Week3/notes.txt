@@ -1,0 +1,31 @@
+
+Parameters and Arguments:
+
+"arguments object in JS": a default object that comes with functions and we can use it track/ work with passed arguments.
+
+"..." rest of parameters:
+
+Boolean:
+ True and False?
+Truthy and falsy
+
+Dealing with Optional or missing arguments:
+
+2. Pre-defined functions:
+    i) parseInt() : we pass a string to this funciton and it converts that into an integer by taking out the numeric part of it...
+
+    ii) parseFloat()
+
+    iii) isNaN()
+
+    iv) Math.abs(), Math.max(), Math.random(), Math.round()
+    v) Date.now();
+    vi) JSON.parse(), JSON.stringify()... JSON.parse() converts JSON dat to normal JavaScript.. and stringify() converts normal javascript to JSON data...
+
+
+Introduction to Objects and Object Oriented Programming
+
+    Object is a collection of data and methods.. together!
+
+    let a=10;
+
