@@ -4,20 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact me</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
   </head>
   <body>
     <h1>Contact me : noman.atique@keyin.com</h1>
     <a href="../index.html">Home</a>
-    <form>
-      <!-- Forms are used to take input from users -->
+    <!-- <form action="data.php" method="get">
       <label>Name</label>
-      <input type="text" /> <br />
+      <input type="text" id="name" name="first" />
       <label>Age</label>
-      <input type="text" /> <br />
-      <label>Email</label>
-      <input type="text" /> <br />
-      <input type="submit" />
-      <input type="reset" />
+      <input type="text" id="age" name="myage" />
+      <label>Password</label>
+      <input type="password" id="password" name="myPassword" />
+      <input type="submit" value="SEND" />
+    </form> -->
+
+    <hr />
+
+    <form>
+      <div>
+        <label for="first-name">First Name</label>
+        <input
+          type="text"
+          id="first-name"
+          autofocus
+          name="given-name"
+          autocomplete="given-name"
+          placeholder="Enter your name here"
+          maxlength="30"
+          tabindex="1"
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="Enter your email here"
+          tabindex="2"
+        />
+      </div>
+
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" tabindex="3" />
+      </div>
+      <div>
+        <label for="position">Position</label>
+        <input
+          type="text"
+          id="position"
+          name="position"
+          tabindex="4"
+          list="positions"
+        />
+
+        <datalist id="positions">
+          <option value="IT Technician"></option>
+          <option value="HR Manager"></option>
+          <option value="Finance Manager"></option>
+          <option value="CEO"></option>
+          <option value="CTO"></option>
+        </datalist>
+      </div>
+
+      <div>
+        <label for="upload">Upload Resume</label>
+        <input
+          type="file"
+          name="upload"
+          id="upload"
+          tabindex="5"
+          accept=".doc,.docx,application/pdf,.pptx"
+        />
+      </div>
+
+      <div>
+        <label for="comments">Comments</label>
+        <textarea
+          name="comments"
+          id="comments"
+          cols="30"
+          rows="10"
+          tabindex="6"
+          placeholder="Enter if you have any special needs"
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="color">Color</label>
+        <input type="color" tabindex="7" id="color" name="color" />
+      </div>
+
+      <div>
+        <input type="submit" value="SEND" />
+        <input type="reset" value="CLEAR" />
+      </div>
     </form>
   </body>
 </html>

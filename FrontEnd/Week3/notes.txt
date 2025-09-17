@@ -26,4 +26,13 @@ Tables in HTML:
 <table> </table>
 
 
-Forms in HTML:
+Forms in HTML: they are used to take input from user..
+    Google.com, keyin.com..
+
+Attibutes of <form> element:
+i) action = "data.php" | "data.asp" | mailto:noman.atique@keyin.com                         [What I want to do with my data when user submits the data]
+
+ii) method = get | post                             [method represents what way we want to use to send data from this page to another  - get & post][get is used to send data by making it part of URL, post is used to send data as part of the body]
+
+id is used to refernce an element in the scripts(CSS, Javascript)
+name is used to take out value of a an input element while sending data from one page to the other
