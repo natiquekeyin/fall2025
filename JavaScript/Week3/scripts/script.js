@@ -51,8 +51,81 @@
 // let height_no = parseFloat(height);
 // console.log(parseFloat(height_no));
 
-let firstName = new String("Alan");
+// let firstName = new String("Alan");
 
-console.log(firstName.toUpperCase());
-console.log(firstName.length);
-console.log(firstName.startsWith("A"));
+// console.log(firstName.toUpperCase());
+// console.log(firstName.length);
+// console.log(firstName.startsWith("A"));
+
+// function f() {
+//   var y = x + 1;
+//   var x = 2;
+//   console.log(y);
+// }
+
+// f();
+// g();
+
+// function g() {
+//   console.log("I am g funciton");
+// }
+
+// let str = "The best. sound. in this world, is your name.";
+
+// // let's write a function that adds period at the end of a string...
+
+// function addPeriod(s) {
+//   //   return s + ".";
+//   //   if (s.endsWith(".")) {
+//   //     return s;
+//   //   } else {
+//   //     return s + ".";
+//   //   }
+//   //   return s.endsWith(".") ? s : s + ".";
+//   let lastPos = s.length - 1;
+//   //   return s.charAt(lastPos) === "." ? s : `${s}.`;
+
+//   return s.lastIndexOf(".") === lastPos ? s : `${s}.`;
+// }
+
+// console.log(addPeriod("hello."));
+// console.log(addPeriod(str));
+
+// let str = "Programming is fun.";
+// console.log(str.slice(0, 11));
+// console.log(str.slice(-5));
+// console.log(str.substring(15));
+
+// let data = "apple,banana,cherry,oranges";
+// let fruits = data.split(",");
+// console.log(fruits);
+
+// let email = "alan@gmail.com";
+// let parts = email.split("@");
+// console.log(parts[0]);
+// console.log(parts[1]);
+
+// let words = ["Hello", "World", "Keyin"];
+// let sentence = words.join(" ");
+// console.log(sentence);
+
+// let messyData = "         alan@gmai.com                 ";
+// console.log(messyData);
+// console.log(messyData.trim());
+
+// let orderNumber = "23";
+// console.log(orderNumber.padStart(5, "0"));
+// console.log(orderNumber.padEnd(10, "."));
+
+// let makeAbbr = function (str) {
+//   let split_names = str.trim().split(" ");
+//   if (split_names.length > 1) {
+//     return split_names[0].charAt(0) + " " + split_names[1].charAt(0) + ".";
+//   }
+
+//   return split_names[0];
+// };
+
+// console.log(makeAbbr("Alan Smith"));
+
+// We will start with Arrays!
