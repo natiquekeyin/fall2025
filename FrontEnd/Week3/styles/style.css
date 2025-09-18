@@ -1,0 +1,13 @@
+html,
+body {
+  font-size: 20px;
+}
+
+p {
+  font-size: 1em;
+
+  /* 1 em means 20px */
+  /* 2 em means 40px */
+}
+
+/* we will start on Monday with "rem" */
