@@ -4,10 +4,17 @@ body {
 }
 
 p {
-  font-size: 1em;
+  font-size: 2rem;
+  /* 40px... because now referencing the root element not the div  */
+  /* p inside div will now adapt from its parent which is h1 and will multiply by 2 */
 
   /* 1 em means 20px */
   /* 2 em means 40px */
 }
 
 /* we will start on Monday with "rem" */
+
+#s1 {
+  font-size: 2rem;
+  /* 40px */
+}

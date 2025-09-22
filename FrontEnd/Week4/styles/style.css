@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#secret {
+  display: none;
+}
+#box1 {
+  border: 1px solid green;
+  width: 300px;
+  padding: 10px;
+}
+
+#box2 {
+  border: 10px solid green;
+  width: 300px;
+  padding: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section {
+  border: 1px solid red;
+}
+
+#s1 {
+  flex: 1;
+}
+#s2 {
+  flex: 1;
+}
+#s3 {
+  flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: aqua;
+  }
+  h1 {
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  section {
+    border: 5px solid green;
+  }
+  #secret {
+    display: block;
+  }
+}
