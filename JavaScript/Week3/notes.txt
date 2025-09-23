@@ -29,3 +29,17 @@ Introduction to Objects and Object Oriented Programming
 
     let a=10;
 
+
+Arrays: Properties & Methods:
+
+How to declare arrays?
+ let numbers = [1,2,3,4];
+ let numbers2 = new Array(5,6,7,8);
+
+
+ 1. index notation..
+ 2. Destructuring (we will use this method in react a lot of time)
+
+ Properteis and methods of arrays:
+ push(value)... inserts a new value at the end of the array...
+ po
