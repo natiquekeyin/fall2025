@@ -202,12 +202,80 @@ let list = [1, 2, 3, 4];
 // console.log(list);
 // console.log(listCopy);
 
-let fruits = ["Apple", "Banana", "Orange", "Pineapple", "Oxy"];
+// let fruits = ["Apple", "Banana", "Orange", "Pineapple", "Oxy"];
 
-let newFruits = fruits.map((fruit) => fruit.startsWith("A"));
-let newFruits2 = fruits.filter((fruit) => fruit.startsWith("A"));
-let newFruits3 = fruits.forEach((fruit) => fruit.startsWith("A")); //We dont use forEach like this! WHY? becasue forEach does not automatically return anything!
-console.log(fruits);
-console.log(newFruits);
-console.log(newFruits2);
-console.log(newFruits3);
+// let newFruits = fruits.map((fruit) => fruit.startsWith("A"));
+// let newFruits2 = fruits.filter((fruit) => fruit.startsWith("A"));
+// let newFruits3 = fruits.forEach((fruit) => fruit.startsWith("A")); //We dont use forEach like this! WHY? becasue forEach does not automatically return anything!
+// console.log(fruits);
+// console.log(newFruits);
+// console.log(newFruits2);
+// console.log(newFruits3);
+
+// .every() returns true if all of the elemnts in the array meet a condition you define in the function..
+
+// let nums = [34, 24, 12, 78, 34, 56];
+// console.log(nums.every((element) => element > 10));
+
+// Iterating over strings...
+
+// let str = "Hello Keyin College";
+
+// // for (let i = 0; i < str.length; i++) {
+// //   let char = str.charAt(i);
+// //   console.log(i, char);
+// // }
+
+// // for of
+
+// for (let char of str) {
+//   console.log(char);
+// }
+
+// let nums = [1, -4, 12, 0, -3, 29, -150];
+
+// let nonzero = nums.filter((num) => num > 0);
+
+// console.log(nonzero);
+
+// let str = "The best sound in this world is your name";
+
+// let createNum = (word) => word[0] + (word.length - 2) + word[word.length - 2];
+
+// console.log(createNum("helloworld"));
+
+// console.log(
+//   str
+//     .split(" ")
+//     .map((word) => {
+//       if (word.length >= 4) {
+//         return createNum(word);
+//       }
+//       return word;
+//     })
+//     .join(" ")
+// );
+
+// Converting an array of names to uppercase
+
+// let names = ["alan", "bob", "christina", "sara"];
+
+// let names_in_upper = names.map(
+//   (name) =>
+//     name[0].toUpperCase() +
+//     name.slice(1, name.length - 1) +
+//     name[name.length - 1].toUpperCase()
+// );
+// console.log(names_in_upper);
+
+// Check if all strings have length greater than 3
+
+// let words = ["html", "java", "csss", "node", "javascript"];
+
+// let allLong = words.every((word) => word.length > 3);
+
+// console.log(allLong);
+
+// https://www.youtube.com/watch?v=0CGJrkKa9Ic&t=4s
+
+// Regular Expressons
