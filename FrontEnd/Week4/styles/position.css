@@ -1,0 +1,45 @@
+/* Position: */
+/* 1. static: default position */
+/* 2. relative position: takes its initial position and can be translated form there on */
+/* 3. absolute: by default it is positioned relative to its closest ancestor(usally the body tag).  */
+/* 4. fixed: rips out the element from the document and fixes it to the viewport  */
+/* 5. sticky: switches between position static and fixed */
+
+.box {
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
+  margin: 20px auto;
+  position: sticky;
+  top: 130px;
+  /* position:relative will make this element reference for any of its child which is absolute */
+}
+
+.item1,
+.item2 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+
+.item1 {
+  background-color: blanchedalmond;
+  /* position: relative;
+  left: 30px;
+  top: 40px; */
+  /* position: fixed;
+  left: 30px;
+  top: 40px; */
+}
+
+.item2 {
+  background-color: aquamarine;
+  /* position: relative;
+  left: 50px;
+  top: 100px; */
+  position: fixed;
+  left: 20;
+  top: 30;
+}
+
+/*   https://www.youtube.com/watch?v=98R0KsZFJX0  */
