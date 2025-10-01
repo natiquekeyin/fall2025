@@ -1,0 +1,41 @@
+Regular Expressions: a pattern for string matching/ manipulation
+
+In million tines of text, if we want to find "Keyin", then we can use Regular expression for that...
+
+colour 
+color 
+
+colou?r
+Keyi?n
+Keyn
+
+In JS, we can write REs in one of the two ways:
+    i) let re = /colou?r/
+    ii) let re2 = new RegExp("keyi?n");
+
+
+Special characters in REs:
+
+. means ANY character!
+\. (if you want a literal period... )
+[] refers to a set . .from which one the letter can appear in string
+[^abc] excluding every character here!no a,b or c could be here....
+\w : a-zA-Z0-9_
+\W: anything other than the above
+\d : a digit
+\D : anything BUT a digit
+\s : space...
+* : 0 or many occurances...
++ : 1 or many occurances....
+{} : means the exact number of digits..
+
+^ : in the beginning means the start of string..
+$ : represents the end of a string...
+
+
+^(\(?\d{3}\)?)?[\s-]*\d{3}[\s-]*\d{4}$
+
+\w+@\w+\.\w+
+
+.test() which tests a reqular expression against a string..
+.match() which disects the given string on the basis of the RE...
