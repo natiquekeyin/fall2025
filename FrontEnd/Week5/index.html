@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
 
     <title>DOM</title>
+    <style>
+      .demo {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <h1 id="ha">Welcome!</h1>
     <p>
       This is a paragraph with a <a href="index.html" class="demo">link</a> in
       it
     </p>
-    <ul>
+    <ul id="list">
       <li id="item1"><a href="#"> first item</a></li>
       <li id="item2">second item</li>
       <li id="item3"><a href="#">third item</a></li>
     </ul>
+    <p id="hide">Hide the pictures</p>
     <img src="./images/image1.jpg" alt="" width="300" id="img1" class="demo" />
     <img src="./images/image2.jpg" alt="" width="300" id="img2" />
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
