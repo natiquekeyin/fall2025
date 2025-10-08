@@ -2,7 +2,8 @@
 
 var csvData = `0134138,Alan Smith,333-580-2254,70 inches
 0134139   ,    Christina    Lee    ,  123            2266347 ,        130 cm
-0134140,       Doug         Thomas       , 532           1226157, 158cm`;
+0134140,       Doug         Thomas       , 532           1226157, 158cm
+0134141,            John Doe,                519-123-4567         , 160 cm`;
 
 /*
 Required output after cleaning:
@@ -61,6 +62,19 @@ function extractAreaCode(phone) {
   }
   return phone;
 }
+
+function normalizeHeight(height) {
+  // if height is alreay inches
+  if (height.endsWith("inches")) {
+    return height;
+  }
+  // it means height is not in inches
+
+  let cm = parseFloat(height);
+  let inches = cm * 0.39;
+
+  return `${Math.round(inches)} inches`;
+}
 function rowToFields(row) {
   let fields = row.split(/\s*,\s*/);
   //3.Remove any unnecessary spaces around the Name field to make it consistent.
@@ -71,9 +85,18 @@ o	"555-555-5555"
 o	"5555555555"*/
 
   fields[2] = extractAreaCode(fields[2]);
-  console.log(fields[2]);
+  // console.log(fields[2]);
 
-  return fields;
+  /* 5. o	If the Height is in centimeters (cm), convert it to inches.
+Conversion: 1 cm = 0.393701 inches
+o	Round the result to the nearest whole number and format it as: "xx inches"
+o	If the height is already in inches, leave it as is.
+if height is already in inches.. return it... and if not do the above stepsl..*/
+
+  fields[3] = normalizeHeight(fields[3]);
+
+  // console.log(fields);
+  return fields.join(",");
 }
 function processCSV(csv) {
   // do all steps
@@ -102,10 +125,12 @@ function processCSV(csv) {
   // c. by using map funciton
 
   let data = rows.map((row) => rowToFields(row));
-  //   console.log(data);
+
+  // console.log(data.join("\n"));
+  return data.join("\n");
 }
 
-// console.log(csvData);
+console.log(csvData);
 console.log("-------------------------");
 let processed = processCSV(csvData);
-// console.log(processed);
+console.log(processed);
