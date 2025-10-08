@@ -35,15 +35,37 @@ window.addEventListener("DOMContentLoaded", function () {
     moreBtn.remove();
 
     let ul = document.createElement("ul");
+    let i = 1;
     cats.forEach(function (url) {
       let li = document.createElement("li");
-      li.innerText = url;
+      // let a = document.createElement("a");
+      // a.href = url;
+      // a.innerText = `<strong>Image</strong> - ${i++}`;
+      // a.target = "_blank";
+      // li.appendChild(a);
+      // li.innerText = url;
+
+      li.innerHTML = `<a href="${url}"> Image - ${i++}</a>`;
       ul.appendChild(li);
     });
 
     document.querySelector("#list").appendChild(ul);
   });
-  //   these li's which are display should be the links to their respecive text
-  //   if user clicks on any of the list item that picture should open only
-  //   submit it today .. mandatory submission :)
+
+  // this.setTimeout(function () {
+  //   // // alert("hello 3 seconds elapsed");
+  //   // cat.remove();
+  //   // moreBtn.remove();
+
+  //   cat.src = nextImageUrl();
+  // }, 3000);
+
+  let counter = 0;
+  this.setInterval(function () {
+    cat.src = nextImageUrl();
+    document.querySelector("#num").innerHTML = `${counter++}`;
+  }, 1000);
 });
+
+// Timer functions
+// 1. setTimeout(function(){},3000); this will run the given function after 3 seconds(3000 milliseconds)
