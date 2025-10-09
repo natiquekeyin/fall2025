@@ -1,0 +1,10 @@
+First let's discuss about Object Oriented Programming
+
+Object Oriented Programmin in JavaScript
+ OOP is a programming paradigm that deals with classes and objects...
+ We create classes ( that contain the code[functions] and data[variables] ) and then we create objects to use the classes!
+
+
+Object datatype in JS:
+
+let obj = {first_name:"Alan", last_name:"Smith" };

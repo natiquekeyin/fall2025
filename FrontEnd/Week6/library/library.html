@@ -11,10 +11,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <style>
+      .error,
+      .success {
+        color: white;
+        width: 100%;
+        border: 1 px solid black;
+        padding: 5px 10px;
+      }
+
+      .error {
+        background-color: red;
+      }
+
+      .success {
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Add Book</h1>
+      <div id="notification">
+        <!-- <p>message...</p> -->
+      </div>
       <form id="form1">
         <div>
           <label for="title">Title</label>
