@@ -5,3 +5,4 @@ let course = {
 };
 
 console.log(course.title);
+console.log(course["title"]);

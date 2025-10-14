@@ -1,0 +1,11 @@
+Asynchronous Programming:
+    Sometimes we want some code to wait for the other, before executing so that we can see the right results. Like in our posts example..where createPost() is taking 3 seconds and before its completion the getPosts() runs and it just dipslay the old output, but not the post4 created by createPost() WHY??? since it is not completed yet...
+
+    1. Callback Functions
+    2. Promises
+    3. async/await functions
+
+    Some APIs that can be used to implement asynchronous behaviour in javascript!
+
+    1. XmlHttpRequest
+    2. Fetch API

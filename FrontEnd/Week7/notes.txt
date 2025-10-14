@@ -8,3 +8,7 @@ Object Oriented Programmin in JavaScript
 Object datatype in JS:
 
 let obj = {first_name:"Alan", last_name:"Smith" };
+
+How to access object values:
+i) By using dot notation
+ii) By using Array notation
