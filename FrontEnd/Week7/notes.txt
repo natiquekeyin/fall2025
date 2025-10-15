@@ -12,3 +12,9 @@ let obj = {first_name:"Alan", last_name:"Smith" };
 How to access object values:
 i) By using dot notation
 ii) By using Array notation
+
+Prototypal Inheritance:
+    Instead of defingin some properties within the constrcutor function, define them in "prototpye" of the constuctor function.In that way those properties will not become automaticall part of the object body, but they will be available if we want to call them...
+    
+    Construction function starts with a capial letter!
+    To create object we use: let objName = new Constructor( list of parameters)
