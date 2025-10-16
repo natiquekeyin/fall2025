@@ -121,14 +121,29 @@
 
 class User {
   // constructor function: it will actually initialize the object of the class
+  // it is automatically called when we create object of a class..
 
   first_name;
   last_name;
-  constructor() {
-    this.first_name = "Alan";
-    this.last_name = "Smith";
+  // constructor() {
+  //   this.first_name = "Alan";
+  //   this.last_name = "Smith";
+  // }
+
+  constructor(f, l) {
+    this.first_name = f;
+    this.last_name = l;
+  }
+
+  setName(f, l) {
+    this.first_name = f;
+    this.last_name = l;
+  }
+  toString() {
+    return this.first_name + " " + this.last_name;
   }
 }
 
-let user1 = new User();
-console.log(user1);
+let user1 = new User("Alan", "Smith");
+user1.setName("Bob", "Woolmer");
+console.log(user1.toString());
