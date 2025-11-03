@@ -1,0 +1,14 @@
+Promises:
+    "Are just like real world promises"
+
+    A promise is either resolve(fullfilled) OR it is reject(not fullfilled)
+
+Syntax of Promises in JS:
+    let p = new Promise(resolve,reject); resolve and reject are two callback methods. 
+
+    resolve( ) is called when promise is fullfilled
+    reject( ) is called when promise is rejected...
+
+    
+
+

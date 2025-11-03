@@ -46,6 +46,10 @@ window.addEventListener("DOMContentLoaded", function () {
       } else {
         this.showAlert("Wrong area, click on X", "error");
       }
+
+      let isbn =
+        elemToDelete.previousElementSibling.previousElementSibling.textContent;
+      Store.removeBook(isbn);
     }
   }
 
@@ -81,7 +85,11 @@ window.addEventListener("DOMContentLoaded", function () {
         objBook.addBookToList(book);
       });
     } //will display the stored books from browser memory
-    static removeBook() {} //will remove a book from browser memory
+    static removeBook(isbn) {
+      let books = Store.getBooks();
+      books = books.filter((book) => book.isbn !== isbn);
+      localStorage.setItem("books", JSON.stringify(books));
+    } //will remove a book from browser memory
   }
 
   let form = this.document.querySelector("#form1");
@@ -107,6 +115,7 @@ window.addEventListener("DOMContentLoaded", function () {
   function handleDelete(evt) {
     let book = new Book();
     book.deleteBook(evt.target);
+
     //   nothing from class Book can be accessed without creating object of Book class..
     //   we cannot access any property of a class, unless we create its objects
   }

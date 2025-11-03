@@ -6,6 +6,9 @@ window.addEventListener("DOMContentLoaded", function () {
   let btn3 = this.document.querySelector("#btn3");
   btn3.addEventListener("click", loadJSONS);
 
+  let btn4 = this.document.querySelector("#btn4");
+  btn4.addEventListener("click", loadAPIData);
+
   function loadData() {
     //    1. create the XHR object
     let xhr = new XMLHttpRequest();
@@ -73,6 +76,34 @@ window.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#output").innerHTML = output;
       } else {
         document.querySelector("#output").innerText = "NO data received";
+      }
+    };
+
+    xhr.send();
+  }
+
+  function loadAPIData() {
+    // create the XHR object
+    let xhr = new XMLHttpRequest();
+
+    // configure it
+    xhr.open("GET", "https://api.github.com/users");
+
+    // what todo when data is received..
+
+    xhr.onload = function () {
+      if (this.status === 200) {
+        let users = JSON.parse(this.responseText);
+        // console.log(users);
+
+        users.forEach((user) => {
+          document.querySelector("#output").innerHTML += `<div class="profile">
+          <h2> ${user.id}</h2>
+          <h3> ${user.login} </h3>
+          <img src = "${user.avatar_url}" alt="profile" class="pic"/> <br/>
+          <a href="${user.url}">More info about me....</a>
+          </div>`;
+        });
       }
     };
 
