@@ -9,6 +9,10 @@ Syntax of Promises in JS:
     resolve( ) is called when promise is fullfilled
     reject( ) is called when promise is rejected...
 
-    
+fetch API:
+
+fetch API actually returns a promise!
+
+
 
 
