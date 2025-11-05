@@ -9,6 +9,10 @@ window.addEventListener("DOMContentLoaded", function () {
   let btn4 = this.document.querySelector("#btn4");
   btn4.addEventListener("click", loadAPIData);
 
+  let btn5 = this.document.querySelector("#btn5");
+
+  btn5.addEventListener("click", loadReqRes);
+
   function loadData() {
     fetch("../data/data.txt")
       .then((response) => {
@@ -48,7 +52,44 @@ window.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function loadAPIData() {}
+  function loadAPIData() {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let output = "";
+        data.forEach((item) => {
+          if (item.completed === true) {
+            output += `<div class="profile"><h3>${item.id}</h3><p>${item.title}</p><p>${item.completed}</p></div>`;
+          }
+
+          document.querySelector("#output").innerHTML = output;
+        });
+      });
+  }
+
+  function loadReqRes() {
+    fetch("https://reqres.in/api/users", {
+      headers: {
+        "x-api-key": "reqres-free-v1",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((info) => {
+        // console.log(info);
+        let output = "";
+        info.data.forEach((user) => {
+          output += `<div class="profile"><h1>${user.id}</h1>
+          <img src="${user.avatar}" alt="pic" class="pic"/>
+          <p>${user.email}<p><p>${user.first_name} ${user.last_name}</p></div>`;
+        });
+
+        document.querySelector("#output").innerHTML = output;
+      });
+  }
 });
 // We will apply some other programing here as well...
 // We need to add API data calling here!...
