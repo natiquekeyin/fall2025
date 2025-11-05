@@ -37,36 +37,48 @@ window.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function loadJSONS() {
-    fetch("../data/users.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        // console.log(data);
-        data.forEach((item) => {
-          document.querySelector(
-            "#output"
-          ).innerHTML += `<div class="profile">ID: ${item.id} <br/> NAME: ${item.first_name} ${item.last_name}`;
-        });
-      });
+  async function loadJSONS() {
+    // fetch("../data/users.json")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     // console.log(data);
+    //     data.forEach((item) => {
+    //       document.querySelector(
+    //         "#output"
+    //       ).innerHTML += `<div class="profile">ID: ${item.id} <br/> NAME: ${item.first_name} ${item.last_name}`;
+    //     });
+    //   });
+
+    let response = await fetch("../data/users.json");
+    let data = await response.json();
+    // console.log(data);
+    data.forEach((item) => {
+      document.querySelector(
+        "#output"
+      ).innerHTML += `<div class="profile">ID: ${item.id} <br/> NAME: ${item.first_name} ${item.last_name}`;
+    });
   }
 
-  function loadAPIData() {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        let output = "";
-        data.forEach((item) => {
-          if (item.completed === true) {
-            output += `<div class="profile"><h3>${item.id}</h3><p>${item.title}</p><p>${item.completed}</p></div>`;
-          }
+  async function loadAPIData() {
+    // fetch("https://jsonplaceholder.typicode.com/todos")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     let output = "";
+    //     data.forEach((item) => {
+    //       if (item.completed === true) {
+    //         output += `<div class="profile"><h3>${item.id}</h3><p>${item.title}</p><p>${item.completed}</p></div>`;
+    //       }
 
-          document.querySelector("#output").innerHTML = output;
-        });
-      });
+    //       document.querySelector("#output").innerHTML = output;
+    //     });
+    //   });
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let data = await response.json();
+    console.log(data);
   }
 
   function loadReqRes() {

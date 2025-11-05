@@ -13,6 +13,12 @@ fetch API:
 
 fetch API actually returns a promise!
 
+fetch API returns a promise!... p.then().then().catch()
+fetch().then().then()
+
+
+Async/Await functions:
+ We make "async" functions that can have "await" statements, that actually await for something to be resolved or a promise to be fullfilled or rejected...
 
 
 
