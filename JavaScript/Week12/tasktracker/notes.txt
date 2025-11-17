@@ -1,0 +1,4 @@
+State in React:
+
+
+Temp folder in components will hold temporarily those components that we will create for practice/testing purpose but they are not the part of our project..
