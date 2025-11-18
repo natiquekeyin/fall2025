@@ -2,3 +2,39 @@ State in React:
 
 
 Temp folder in components will hold temporarily those components that we will create for practice/testing purpose but they are not the part of our project..
+
+
+     const [x,setX] =useState(0);     // actually creates a "state" variable and assigns "0" to it.
+
+    console.log(x); // Output: 0
+
+    x=x+2; NOT THE RIGHT WAY OF CHANGIN A STATE VARIABLE..
+
+    setX(x+2); 
+
+    console.log(x);
+
+    console.log(x); // Output: 
+
+
+      const [name,setName] =useState("Alan"); // creates a state varaible and assigns "Alan" as the default/initialized value of that variable.
+
+      name = "Bob"; NOOOOOOOOOOOOOOOOOOoooooo
+
+    setName("Bob"); RIGHT WAY OF CHANGING NAME VARIABLE...
+
+
+
+      const [y,setY]=useState(false); creates a state variable which is boolean and assigns "false" as the defaul/initial values
+
+      console.log(y);
+
+      y=true; NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooooo
+
+      setY(true);
+
+      Return 2 things:
+      i) Reference/name of the variable
+      ii) The function to manipulate this variable....
+
+      x=x+5
