@@ -38,3 +38,15 @@ Temp folder in components will hold temporarily those components that we will cr
       ii) The function to manipulate this variable....
 
       x=x+5
+
+
+
+
+       {/* <USComponent /> */}
+      {/* <USWithObject1 /> */}
+      {/* <USWithArray /> */}
+
+
+      Primarily we try to store everything in App.jsx to make it globally accessible...
+      We define evertying in App.jsx and from there onward we pass each thing into respective component and use it there....
+      
