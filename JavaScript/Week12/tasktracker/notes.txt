@@ -50,3 +50,16 @@ Temp folder in components will hold temporarily those components that we will cr
       Primarily we try to store everything in App.jsx to make it globally accessible...
       We define evertying in App.jsx and from there onward we pass each thing into respective component and use it there....
       
+
+  Another Hook in React: 
+  
+  useEffect() ...
+  It creates/provides side effects when we render/re-render a component 
+
+  useEffect runs with every rendering/re-re ndering of a component...
+
+  useEffect might run:
+    i) With every rendering and re-rendering
+    ii) With ONLY first time running of the component [ ]
+    iii) With every change in a particular state variable....[variable]
+
