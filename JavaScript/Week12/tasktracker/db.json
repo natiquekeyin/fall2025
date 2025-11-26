@@ -1,3 +1,22 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "d751",
+      "text": "Shopping ",
+      "day": "December 20,2025",
+      "reminder": true
+    },
+    {
+      "id": "6b93",
+      "text": "GYM",
+      "day": "Jan 01,2026",
+      "reminder": false
+    },
+    {
+      "id": "fda3",
+      "text": "Interview ",
+      "day": "Jan 2,2026",
+      "reminder": true
+    }
+  ]
 }

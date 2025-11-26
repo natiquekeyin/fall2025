@@ -1,7 +1,11 @@
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import Ueffect from "./components/Temp/Ueffect";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -23,6 +27,14 @@ function App() {
     return data;
   };
 
+  // Fetch Task
+
+  const fetchTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const data = res.json();
+    return data;
+  };
+
   // Delete task
 
   const deleteTask = async (id) => {
@@ -32,7 +44,23 @@ function App() {
   };
 
   // Toggle Reminder
-  const toggleReminder = (id) => {
+  const toggleReminder = async (id) => {
+    // Bring the task with this parameter id here
+    const taskToToggle = await fetchTask(id);
+
+    // create a new task updTask.. that spreads out the taskToToggle and flips its reminder
+    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
+
+    // make a PUT request...
+
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(updTask),
+    });
+
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task
@@ -42,29 +70,58 @@ function App() {
 
   // Add task
 
-  const addTask = (task) => {
+  const addTask = async (task) => {
     // since no id is taken as input we create our own id first to add to the new record
-    const id = Math.floor(Math.random() * 1000) + 1;
+    // const id = Math.floor(Math.random() * 1000) + 1;
 
-    const newTask = { id, ...task }; //add the generated id with the task in consideration....
+    const res = await fetch("http://localhost:5000/tasks", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(task),
+    });
 
-    setTasks([...tasks, newTask]);
+    const data = await res.json();
+    // to update the UI
+    setTasks([...tasks, data]);
+
+    // const newTask = { id, ...task }; //add the generated id with the task in consideration....
   };
 
   return (
-    <div className="container">
-      <Header
-        title="Task Tracker"
-        onAdd={() => setShowAddTask(!showAddTask)}
-        showAdd={showAddTask}
-      />
-      {showAddTask && <AddTask onAdd={addTask} />}
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
-      ) : (
-        "No tasks to show"
-      )}
-    </div>
+    <Router>
+      <div className="container">
+        <Header
+          title="Task Tracker"
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {showAddTask && <AddTask onAdd={addTask} />}
+                {tasks.length > 0 ? (
+                  <Tasks
+                    tasks={tasks}
+                    onDelete={deleteTask}
+                    onToggle={toggleReminder}
+                  />
+                ) : (
+                  "No tasks to show"
+                )}
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/temp" element={<Ueffect />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

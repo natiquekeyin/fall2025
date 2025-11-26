@@ -63,3 +63,8 @@ Temp folder in components will hold temporarily those components that we will cr
     ii) With ONLY first time running of the component [ ]
     iii) With every change in a particular state variable....[variable]
 
+
+React Router DOM:
+
+When we want to make routes in our react application, we use react-router-dom... it provides us the facility of defining the routes and accessing or bringing different component on different links...
+

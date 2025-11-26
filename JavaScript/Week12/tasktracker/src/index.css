@@ -89,3 +89,7 @@ header {
   flex: 2;
   height: 23px;
 }
+
+footer {
+  text-align: center;
+}
