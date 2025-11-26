@@ -93,3 +93,28 @@ header {
 footer {
   text-align: center;
 }
+
+nav {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  background-color: bisque;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: green;
+}
+
+.about {
+  background-color: rgb(141, 235, 165);
+  max-width: 300px;
+  margin: 10px auto;
+  border: 1px solid green;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}

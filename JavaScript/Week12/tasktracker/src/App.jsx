@@ -3,9 +3,10 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "./components/About";
 import Ueffect from "./components/Temp/Ueffect";
+import TaskDetails from "./components/TaskDetails";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -92,12 +93,25 @@ function App() {
   return (
     <Router>
       <div className="container">
+        <nav>
+          <Link to="/" className="navlink">
+            Home
+          </Link>
+          <Link to="/about" className="navlink">
+            About
+          </Link>
+          <Link to="/temp" className="navlink">
+            Temp
+          </Link>
+          <Link to="/" className="navlink">
+            Tasks
+          </Link>
+        </nav>
         <Header
           title="Task Tracker"
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
         />
-
         <Routes>
           <Route
             path="/"
@@ -118,6 +132,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/temp" element={<Ueffect />} />
+          <Route path="/task/:id" element={<TaskDetails />} />
         </Routes>
         <Footer />
       </div>

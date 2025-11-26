@@ -68,3 +68,6 @@ React Router DOM:
 
 When we want to make routes in our react application, we use react-router-dom... it provides us the facility of defining the routes and accessing or bringing different component on different links...
 
+<a></a> element creates an http request... 
+
+We actually use <Link></Link> from react router dom
