@@ -3,7 +3,7 @@
 const Greet = () => {
   return (
     <div>
-      <p>heLLO</p>
+      <p>Hello</p>
     </div>
   );
 };
